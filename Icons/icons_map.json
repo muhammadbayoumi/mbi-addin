@@ -10,6 +10,7 @@
     { "ControlName": "btnStationElevationCoordinate", "FileName": "noun-geodetic-equipment.png" },
     { "ControlName": "btnShapeCode77", "FileName": "noun-spring-coil.png" },
     { "ControlName": "btnHelp", "FileName": "question.png" },
+    { "ControlName": "btnConnectionStatus", "FileName": "cloud.png" },
     { "ControlName": "btnSettings", "FileName": "setting.png" }
   ]
 }

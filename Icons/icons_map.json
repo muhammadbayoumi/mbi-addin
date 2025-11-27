@@ -1,15 +1,15 @@
 {
-  "Version": "1.1",
+  "Version": "1.2",
   "Icons": [
     { "ControlName": "btnLinkedIn", "FileName": "linkedin.png" },
     { "ControlName": "btnEmail",    "FileName": "mail.png" },
     { "ControlName": "btnPhone",    "FileName": "telephone-symbol-button.png" },
-    { "ControlName": "btnVersion",  "FileName": "update.png" },
-    { "ControlName": "mnuAbout",    "FileName": "developer.png" },
-    { "ControlName": "btnIconStatus", "FileName": "sync.png" },
+    { "ControlName": "btnVersion",  "FileName": "refresh-page-option.png" },
+    { "ControlName": "mnuAbout",    "FileName": "info.png" },
+    { "ControlName": "btnIconStatus", "FileName": "search-interface-symbol.png" },
     { "ControlName": "btnStationElevationCoordinate", "FileName": "noun-geodetic-equipment.png" },
     { "ControlName": "btnShapeCode77", "FileName": "noun-spring-coil.png" },
-    { "ControlName": "btnHelp", "FileName": "sync.png" },
-    { "ControlName": "btnSettings", "FileName": "sync.png" }
+    { "ControlName": "btnHelp", "FileName": "question.png" },
+    { "ControlName": "btnSettings", "FileName": "setting.png" }
   ]
 }

@@ -2,8 +2,8 @@
   "Version": "1.0.7",
   "Icons": [
     { "ControlName": "btnLinkedIn", "FileName": "linkedin.png" },
-    { "ControlName": "btnEmail",    "FileName": "email.png" },
-    { "ControlName": "btnPhone",    "FileName": "phone.png" },
+    { "ControlName": "btnEmail",    "FileName": "mail.png" },
+    { "ControlName": "btnPhone",    "FileName": "telephone-symbol-button.png" },
     { "ControlName": "btnVersion",  "FileName": "update.png" },
     { "ControlName": "mnuAbout",    "FileName": "developer.png" },
     { "ControlName": "btnIconStatus", "FileName": "sync.png" }

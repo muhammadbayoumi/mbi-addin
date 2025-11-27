@@ -1,5 +1,5 @@
 {
-  "Version": "1.0.7",
+  "Version": "1.0",
   "Icons": [
     { "ControlName": "btnLinkedIn", "FileName": "linkedin.png" },
     { "ControlName": "btnEmail",    "FileName": "mail.png" },

@@ -6,10 +6,10 @@
     { "ControlName": "btnPhone",    "FileName": "telephone-symbol-button.png" },
     { "ControlName": "btnVersion",  "FileName": "update.png" },
     { "ControlName": "mnuAbout",    "FileName": "developer.png" },
-    { "ControlName": "btnIconStatus", "FileName": "sync.png" }
-    { "ControlName": "btnStationElevationCoordinate", "FileName": "noun-geodetic-equipment.png" }
-    { "ControlName": "btnShapeCode77", "FileName": "noun-spring-coil.png" }
-    { "ControlName": "btnHelp", "FileName": "sync.png" }
+    { "ControlName": "btnIconStatus", "FileName": "sync.png" },
+    { "ControlName": "btnStationElevationCoordinate", "FileName": "noun-geodetic-equipment.png" },
+    { "ControlName": "btnShapeCode77", "FileName": "noun-spring-coil.png" },
+    { "ControlName": "btnHelp", "FileName": "sync.png" },
     { "ControlName": "btnSettings", "FileName": "sync.png" }
   ]
 }

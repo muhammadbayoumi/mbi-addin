@@ -1,121 +1,229 @@
-بناءً على الكود "الألترا" الذي كتبناه، عندما تختار جدولاً (مثلاً جدول أسعار السلع `COMMODITY_PRICES`) في الشبكة العلوية، سيظهر لك التقرير التالي في مربع `RichTextBox` الأسود في الأسفل.
+إليك التصميم **النهائي والكامل (Final Masterpiece)** للتقرير، مشتملاً على قسم **السياق (Context)** الذي طلبته، بالإضافة إلى الوصف التقني الدقيق لتسليمه للمطور.
 
-هذا التقرير مصمم ليخبرك بقصة حياة الجدول بالكامل (من الإكسل إلى قاعدة البيانات).
+---
 
-### 🖥️ شكل التقرير المتوقع (Visual Output)
+### أولاً: الشكل النهائي للتقرير (The Visual Output)
 
-*(تخيل هذا النص بخط Consolas، والخلفية سوداء، والنصوص الملونة كما سأشرح أدناه)*
+تخيل هذا النص يظهر في الشاشة السوداء (Console):
 
 ```text
-╔══════════════════════════════════════════════════════════════════════════════╗
-║ ENTITY REPORT: Global Commodity Prices                                       ║
-╚══════════════════════════════════════════════════════════════════════════════╝
+================================================================================
+:: SYSTEM ENTITY FORENSIC REPORT ::
+================================================================================
 
-► SYSTEM HEALTH & STATUS
+[ 0. CONTEXT & HEALTH SUMMARY ] (سياق المستخدم والحالة العامة)
+   Target Entity     : [ SALES_DATA_EG ]
+   User Profile      : [ Tier: FREE | Region: GLOBAL ]
+   Access Decision   : [ TEASER MODE 🔒 ] (User Tier < Entity Tier)
+   Sync Status       : [ ⚠️ UPDATE AVAILABLE ]
+   Overall Health    : [ ⚠️ WARNINGS DETECTED ]
+
 --------------------------------------------------------------------------------
- Definition Key            : COMMODITY_PRICES
- Table Key                 : tbl_commodities_v1
- Sync Status               : Synced
- Local Existence           : YES
- Row Count                 : 15,420
- Last Updated              : 2025-10-20 14:30:00
- Version Match             : Local [2.1] vs Remote [2.1]
 
-► DIAGNOSTIC ISSUES (1)
+[ 1. SYS_DEFINITIONS ] (التعريف المنطقي والإعدادات)
+   Display Name      : [ Egypt Sales Report Q1 ]
+   Def Key           : [ SALES_DATA_EG ]
+   Parent Def Key    : [ SALES_BASE ]
+   Super Category    : [ SALES_REPORTS ]
+   Sort Order        : [ 10 ]
+   Icon Name         : [ ChartColumn ]
+   Is Active         : [ TRUE ]
+   
+   -- Behavior & Policy --
+   Access Level      : [ PREMIUM ]
+   Cache Policy      : [ MERGE_UPSERT ]
+   UI View Mode      : [ GRID ]
+   ID Prefix Rule    : [ TXN- ]
+   Behavior Tags     : [HAS_PRICE], [FORECAST], [MONTHLY]
+   Color Hex         : [ #FF5733 ]
+   Description       : Monthly sales transaction data for Egypt region.
+
 --------------------------------------------------------------------------------
-  [WARNING] COLUMN_NOT_IN_SQLITE: Column 'Created_By_User' is defined in SYS_SCHEMA_RULES but missing from the physical SQLite table.
 
-► METADATA: SYS_DEFINITIONS
+[ 2. MASTER_DIRECTORY ] (المصدر والاتصال الفيزيائي)
+   Table Key         : [ TBL_SALES_EG_V1 ]
+   Def Key           : [ SALES_DATA_EG ]
+   Display Name      : [ Sales EG Source ]
+   Is Active         : [ TRUE ]
+
+   -- Connection Details --
+   Provider Name     : [ Internal_ERP ]
+   Region Code       : [ EG ]
+   Map Group Key     : [ MAP_SALES_STD ]
+   Source URL        : [ https://api.company.com/export/sales_eg.tsv ]
+   
+   -- Versioning & Access --
+   Version           : [ v2.1.5 ]
+   Access Tier       : [ PREMIUM ]
+   Update Freq       : [ DAILY ]
+   Is Premium        : [ YES ]
+   Description       : Direct export from Cairo Branch Server.
+
 --------------------------------------------------------------------------------
- Super Category            : MARKET_DATA
- Access Level              : PREMIUM
- Is Active                 : True
- Cache Policy              : NORMAL
- View Mode                 : GRID
- Behavior Tags             : FORECAST_ENABLED, HAS_CHART
- Icon Name                 : ChartLine
- Sort Order                : 10
 
-► DATA SOURCES: MASTER_DIRECTORY (1)
+[ 3. SYS_SCHEMA_RULES ] (هيكلة الأعمدة - التفصيل الكامل)
+
+   #01 [ Transaction_ID ]
+       Data Type     : INTEGER
+       Is Primary    : [ YES ]    Is Required   : [ YES ]
+       Is Visible    : NO         Is Editable   : NO
+       License Tier  : FREE       Global Append : YES
+       UI Width      : 0
+       Format String : -
+       Default Value : -
+       Ref Def Key   : -
+       Semantics     : KEY
+       Validation    : -
+       Aggregation   : NONE
+       Description   : Unique Transaction ID.
+
+   #02 [ Transaction_Date ]
+       Data Type     : DATETIME
+       Is Primary    : NO         Is Required   : [ YES ]
+       Is Visible    : [ YES ]    Is Editable   : NO
+       License Tier  : FREE       Global Append : YES
+       UI Width      : 120
+       Format String : "dd/MM/yyyy"
+       Default Value : "NOW()"
+       Ref Def Key   : -
+       Semantics     : DIMENSION
+       Validation    : "MIN:2020-01-01"
+       Aggregation   : NONE
+       Description   : Date of purchase.
+
+   #03 [ Unit_Price ]
+       Data Type     : DECIMAL
+       Is Primary    : NO         Is Required   : [ YES ]
+       Is Visible    : [ YES ]    Is Editable   : [ YES ]
+       License Tier  : [ PREMIUM ]
+       Global Append : NO
+       UI Width      : 100
+       Format String : "#,##0.00"
+       Default Value : 0
+       Ref Def Key   : -
+       Semantics     : MEASURE
+       Validation    : "MIN:0"
+       Aggregation   : SUM
+       Description   : Unit price in local currency.
+
+   (... يتم سرد باقي الأعمدة ...)
+
 --------------------------------------------------------------------------------
-  [SOURCE #1]
-  Region                   : GLOBAL
-  Provider                 : Reuters API
-  URL                      : https://api.mbi-data.com/export/commodities.tsv
-  Map Group                : MAP_COMMODITIES
-  Tier                     : PREMIUM
-  Active                   : True
 
-► SCHEMA: SYS_SCHEMA_RULES (5 Columns)
+[ 4. SYS_DATA_MAP ] (قواعد المعالجة الخام من الشيت)
+   * يعرض القواعد كما هي مكتوبة في ملف الإعدادات *
+
+   Rule #1 (Table Specific)
+       Target Key    : [ Transaction_ID ]
+       Raw Header    : [ "Txn_Ref_No" ]
+       Static Value  : -
+       Transform     : -
+
+   Rule #2 (Group Inherited: MAP_SALES_STD)
+       Target Key    : [ Customer_Name ]
+       Raw Header    : [ "Client_Name_Full" ]
+       Static Value  : -
+       Transform     : "TRIM | UPPER"
+
+   Rule #3 (Static Injection)
+       Target Key    : [ Region_Code ]
+       Raw Header    : -
+       Static Value  : [ "EG" ]
+       Transform     : -
+
 --------------------------------------------------------------------------------
-  Col Key              | Type       | PK    | Visible    | Tier           
-  -------------------- | ---------- | ----- | ---------- | ---------------
-  Symbol_ID            | INTEGER    | YES   | NO         | Free           
-  Ticker_Name          | TEXT       | -     | YES        | Free           
-  Close_Price          | REAL       | -     | YES        | Free           
-  Future_Forecast      | REAL       | -     | YES        | Premium        
-  Internal_Cost        | REAL       | -     | NO         | Admin          
 
-► ETL MAPS: SYS_DATA_MAP (4 Rules)
+[ 5. SYS_DATA_MAP & RESOLUTION ] (تحليل الربط النهائي للأعمدة)
+   * يطابق كل عمود في السكيمة (القسم 3) مع قاعدته (القسم 4) لبيان النتيجة النهائية *
+
+   #01 TARGET: [ Transaction_ID ]
+       Resolution    : [ ✅ MAPPED ]
+       Source Type   : FILE_HEADER
+       Value Source  : "Txn_Ref_No"
+       Action        : Read from file column 'Txn_Ref_No'.
+
+   #02 TARGET: [ Customer_Name ]
+       Resolution    : [ ✅ MAPPED ]
+       Source Type   : FILE_HEADER
+       Value Source  : "Client_Name_Full"
+       Action        : Read from file, then apply (TRIM, UPPER).
+
+   #03 TARGET: [ Region_Code ]
+       Resolution    : [ ✅ MAPPED ]
+       Source Type   : STATIC_VALUE
+       Value Source  : "EG"
+       Action        : Inject static value 'EG' into all rows.
+
+   #04 TARGET: [ Notes ]
+       Resolution    : [ ❌ UNMAPPED / MISSING ]
+       Source Type   : NULL
+       Value Source  : -
+       Action        : Will insert NULL (Check if this is an error!).
+
 --------------------------------------------------------------------------------
-  [Symbol_ID           ] <== Read Header [id]
-  [Ticker_Name         ] <== Read Header [ticker_symbol] -> Apply UPPER
-  [Close_Price         ] <== Read Header [close_val]
-  [Source_Region       ] <== Set Static ['GLOBAL']
 
-► PHYSICAL / SYNC – SQLite & _Sys_Versions
+[ 6. LOCAL DATABASE HEALTH ] (الفحص الجنائي للبيانات)
+   Physical Table    : [ TBL_SALES_EG_V1 ]
+   Storage State     : [ EXISTS ]
+   Row Count         : [ 12,450 ] Rows
+   Local Version     : [ v2.1.0 ]
+   Remote Version    : [ v2.1.5 ]
+   Last Updated      : 2023-10-25 09:30:00
+   Storage Used      : 2.45 MB
+   Data Integrity    : [ OK ] No corruption detected.
+   Sync Status       : [ ⚠️ OUTDATED ] Needs Sync.
+
 --------------------------------------------------------------------------------
- Table_Key      : tbl_commodities_v1
- ExistsLocally  : True
- RowCount       : 15,420
- LocalVersion   : 2.1
- RemoteVersion  : 2.1
- VersionMatch   : YES
- LastUpdated    : 2025-10-20 14:30:00
- UpdateStrategy : MergeUpsert
 
-[VALIDATION & WARNINGS]
+[ 7. DIAGNOSTICS & ALERTS ] (ملخص المشاكل)
+   [WRN] VERSION_MISMATCH : Local data (v2.1.0) is older than server (v2.1.5).
+   [WRN] HIDDEN_REQUIRED  : Column 'Transaction_ID' is Required but Hidden.
+   [ERR] UNMAPPED_COLUMN  : Column 'Notes' has no mapping rule.
+   [OK]  Primary Keys valid.
+   [OK]  No Zombie columns detected.
 
- [WRN] COLUMN_NOT_IN_SQLITE: Column 'Created_By_User' is defined in SYS_SCHEMA_RULES but missing from the physical SQLite table.
+================================================================================
+END OF REPORT
 ```
 
 ---
 
-### 🎨 ماذا تعني الألوان؟ (Color Coding)
+### ثانياً: الوصف التقني الدقيق (Technical Spec)
+(لإرساله للمطور لتنفيذ كود الـ Rendering)
 
-الكود يحتوي على دالة `ColorizeReport` ستقوم بتلوين الكلمات المفتاحية تلقائياً:
+**Module:** `EntityForensicRenderer`
+**Input:** `EntityInsight` object + `UserProfile` object.
+**Output:** Formatted `string` (for RichTextBox).
 
-1.  **الأخضر (Green):**
-    *   كلمة `YES` (مثل `Local Existence: YES`).
-    *   كلمة `Synced`.
-    *   كلمة `[OK]`.
-    *   *المعنى:* هذا الجزء سليم ومطمئن.
+**Requirements (Rendering Logic):**
 
-2.  **الأحمر (Red):**
-    *   كلمة `[ERROR]`.
-    *   كلمة `Drift`.
-    *   كلمة `NO` (في أماكن حرجة مثل `Version Match: NO`).
-    *   *المعنى:* انتبه! هناك خطأ يمنع العمل أو بيانات فاسدة.
+1.  **Format Style:**
+    *   Use **Monospace Font** alignment logic (`String.PadRight`).
+    *   Use brackets `[ Value ]` for key data points.
+    *   Sections must be separated by dashed lines (`---`).
 
-3.  **البرتقالي (Orange):**
-    *   كلمة `[WARNING]` أو `[WRN]`.
-    *   كلمة `Update` (يوجد تحديث متاح).
-    *   *المعنى:* النظام يعمل، لكن هناك شيئاً غير مثالي (مثل عمود ناقص في SQLite لكنه غير ضروري).
+2.  **Section 0: Context (Calculated):**
+    *   Compare `UserProfile.Tier` vs `EntityInsight.AccessLevel`.
+    *   If User < Entity: Display `[ TEASER MODE 🔒 ]`.
+    *   Compare `LocalVersion` vs `RemoteVersion` to determine `Sync Status`.
 
-4.  **الرمادي (Gray):**
-    *   للأعمدة المخفية (`Visible: NO`) أو الجداول غير النشطة.
+3.  **Section 3: Schema (Iterative Block):**
+    *   Iterate through `EntityInsight.Columns`.
+    *   Render ALL 15+ properties of `SchemaRuleEntity`.
+    *   Format MUST be in a 2-column or 3-column key-value block for readability (not a wide table row).
 
----
+4.  **Section 5: Resolution (Analytical Join):**
+    *   **Logic:** Perform a Left Join in memory: `Columns` -> `Mappings`.
+    *   **Condition:** Match on `ColKey` == `TargetColKey`.
+    *   **Output:**
+        *   If match found: Display Source (Header/Static) and Transform. Tag as `[ ✅ MAPPED ]`.
+        *   If match NOT found: Tag as `[ ❌ UNMAPPED ]`.
 
-### 🌟 لماذا هذه الواجهة "عالمية"؟
+5.  **Color Coding Requirements (Syntax Highlighting):**
+    *   **Green:** `TRUE`, `YES`, `OK`, `MAPPED`, `EXISTS`.
+    *   **Red:** `FALSE` (if negative context), `NO`, `ERR`, `MISSING`, `UNMAPPED`.
+    *   **Yellow/Orange:** `WRN`, `UPDATE AVAILABLE`, `TEASER MODE`, `PREMIUM`, `ADMIN`.
+    *   **White/Gray:** Standard text and labels.
 
-1.  **الشفافية الكاملة (Full Traceability):**
-    أنت ترى السلسلة كاملة: التعريف في الإكسل $\leftarrow$ رابط المصدر $\leftarrow$ كيف تمت ترجمة الأعمدة (Mapping) $\leftarrow$ ما تم تخزينه فعلاً في SQLite. لا يوجد "صندوق أسود".
-
-2.  **التشخيص الفوري:**
-    بدلاً من أن يقول المستخدم "الجدول لا يعمل"، سترى أنت فوراً:
-    `[ERROR] MAPPING_INVALID: Target Column 'Price' not found.`
-    ستعرف أن الخطأ في شيت `SYS_DATA_MAP`.
-
-3.  **كشف الأمان:**
-    في قسم `SCHEMA`، يمكنك رؤية عمود `Internal_Cost` ومكتوب أمامه `Tier: Admin`. هذا يؤكد لك أن نظام الحماية يعمل وأن هذا العمود لن يظهر للمستخدم العادي.
+6.  **Data Source:**
+    *   Ensure ALL properties from `TableDefinitionEntity`, `DirectoryItemEntity`, `SchemaRuleEntity`, and `DataMapEntity` are visible. Do not hide nulls; show them as `-`.

@@ -1,0 +1,121 @@
+بناءً على الكود "الألترا" الذي كتبناه، عندما تختار جدولاً (مثلاً جدول أسعار السلع `COMMODITY_PRICES`) في الشبكة العلوية، سيظهر لك التقرير التالي في مربع `RichTextBox` الأسود في الأسفل.
+
+هذا التقرير مصمم ليخبرك بقصة حياة الجدول بالكامل (من الإكسل إلى قاعدة البيانات).
+
+### 🖥️ شكل التقرير المتوقع (Visual Output)
+
+*(تخيل هذا النص بخط Consolas، والخلفية سوداء، والنصوص الملونة كما سأشرح أدناه)*
+
+```text
+╔══════════════════════════════════════════════════════════════════════════════╗
+║ ENTITY REPORT: Global Commodity Prices                                       ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+► SYSTEM HEALTH & STATUS
+--------------------------------------------------------------------------------
+ Definition Key            : COMMODITY_PRICES
+ Table Key                 : tbl_commodities_v1
+ Sync Status               : Synced
+ Local Existence           : YES
+ Row Count                 : 15,420
+ Last Updated              : 2025-10-20 14:30:00
+ Version Match             : Local [2.1] vs Remote [2.1]
+
+► DIAGNOSTIC ISSUES (1)
+--------------------------------------------------------------------------------
+  [WARNING] COLUMN_NOT_IN_SQLITE: Column 'Created_By_User' is defined in SYS_SCHEMA_RULES but missing from the physical SQLite table.
+
+► METADATA: SYS_DEFINITIONS
+--------------------------------------------------------------------------------
+ Super Category            : MARKET_DATA
+ Access Level              : PREMIUM
+ Is Active                 : True
+ Cache Policy              : NORMAL
+ View Mode                 : GRID
+ Behavior Tags             : FORECAST_ENABLED, HAS_CHART
+ Icon Name                 : ChartLine
+ Sort Order                : 10
+
+► DATA SOURCES: MASTER_DIRECTORY (1)
+--------------------------------------------------------------------------------
+  [SOURCE #1]
+  Region                   : GLOBAL
+  Provider                 : Reuters API
+  URL                      : https://api.mbi-data.com/export/commodities.tsv
+  Map Group                : MAP_COMMODITIES
+  Tier                     : PREMIUM
+  Active                   : True
+
+► SCHEMA: SYS_SCHEMA_RULES (5 Columns)
+--------------------------------------------------------------------------------
+  Col Key              | Type       | PK    | Visible    | Tier           
+  -------------------- | ---------- | ----- | ---------- | ---------------
+  Symbol_ID            | INTEGER    | YES   | NO         | Free           
+  Ticker_Name          | TEXT       | -     | YES        | Free           
+  Close_Price          | REAL       | -     | YES        | Free           
+  Future_Forecast      | REAL       | -     | YES        | Premium        
+  Internal_Cost        | REAL       | -     | NO         | Admin          
+
+► ETL MAPS: SYS_DATA_MAP (4 Rules)
+--------------------------------------------------------------------------------
+  [Symbol_ID           ] <== Read Header [id]
+  [Ticker_Name         ] <== Read Header [ticker_symbol] -> Apply UPPER
+  [Close_Price         ] <== Read Header [close_val]
+  [Source_Region       ] <== Set Static ['GLOBAL']
+
+► PHYSICAL / SYNC – SQLite & _Sys_Versions
+--------------------------------------------------------------------------------
+ Table_Key      : tbl_commodities_v1
+ ExistsLocally  : True
+ RowCount       : 15,420
+ LocalVersion   : 2.1
+ RemoteVersion  : 2.1
+ VersionMatch   : YES
+ LastUpdated    : 2025-10-20 14:30:00
+ UpdateStrategy : MergeUpsert
+
+[VALIDATION & WARNINGS]
+
+ [WRN] COLUMN_NOT_IN_SQLITE: Column 'Created_By_User' is defined in SYS_SCHEMA_RULES but missing from the physical SQLite table.
+```
+
+---
+
+### 🎨 ماذا تعني الألوان؟ (Color Coding)
+
+الكود يحتوي على دالة `ColorizeReport` ستقوم بتلوين الكلمات المفتاحية تلقائياً:
+
+1.  **الأخضر (Green):**
+    *   كلمة `YES` (مثل `Local Existence: YES`).
+    *   كلمة `Synced`.
+    *   كلمة `[OK]`.
+    *   *المعنى:* هذا الجزء سليم ومطمئن.
+
+2.  **الأحمر (Red):**
+    *   كلمة `[ERROR]`.
+    *   كلمة `Drift`.
+    *   كلمة `NO` (في أماكن حرجة مثل `Version Match: NO`).
+    *   *المعنى:* انتبه! هناك خطأ يمنع العمل أو بيانات فاسدة.
+
+3.  **البرتقالي (Orange):**
+    *   كلمة `[WARNING]` أو `[WRN]`.
+    *   كلمة `Update` (يوجد تحديث متاح).
+    *   *المعنى:* النظام يعمل، لكن هناك شيئاً غير مثالي (مثل عمود ناقص في SQLite لكنه غير ضروري).
+
+4.  **الرمادي (Gray):**
+    *   للأعمدة المخفية (`Visible: NO`) أو الجداول غير النشطة.
+
+---
+
+### 🌟 لماذا هذه الواجهة "عالمية"؟
+
+1.  **الشفافية الكاملة (Full Traceability):**
+    أنت ترى السلسلة كاملة: التعريف في الإكسل $\leftarrow$ رابط المصدر $\leftarrow$ كيف تمت ترجمة الأعمدة (Mapping) $\leftarrow$ ما تم تخزينه فعلاً في SQLite. لا يوجد "صندوق أسود".
+
+2.  **التشخيص الفوري:**
+    بدلاً من أن يقول المستخدم "الجدول لا يعمل"، سترى أنت فوراً:
+    `[ERROR] MAPPING_INVALID: Target Column 'Price' not found.`
+    ستعرف أن الخطأ في شيت `SYS_DATA_MAP`.
+
+3.  **كشف الأمان:**
+    في قسم `SCHEMA`، يمكنك رؤية عمود `Internal_Cost` ومكتوب أمامه `Tier: Admin`. هذا يؤكد لك أن نظام الحماية يعمل وأن هذا العمود لن يظهر للمستخدم العادي.

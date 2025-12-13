@@ -1,5 +1,5 @@
 {
-  "Version": "1.6",
+  "Version": "1.7",
   "Icons": [
     { "ControlName": "btnLinkedIn", "FileName": "linkedin.png" },
     { "ControlName": "btnEmail",    "FileName": "mail.png" },
@@ -12,6 +12,6 @@
     { "ControlName": "btnHelp", "FileName": "question.png" },
     { "ControlName": "btnConnectionStatus", "FileName": "data.png" },
     { "ControlName": "btnSubscription", "FileName": "data.png" },
-    { "ControlName": "btnSettings", "FileName": "setting.png" }
+    { "ControlName": "btnSettings", "FileName": ".png" }
   ]
 }

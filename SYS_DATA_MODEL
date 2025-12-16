@@ -1,0 +1,176 @@
+الخطوة القادمة المنطقية هي **"إغلاق الدائرة"**.
+
+لقد قمنا بتصميم وبناء 4 من أصل 5 جداول أساسية. يتبقى لنا الجدول الخامس والأهم: **`SYS_DATA_MODEL`**.
+
+هذا الجدول هو **"مهندس العلاقات"**، وهو المسؤول عن تنفيذ طلبك المعقد بخصوص الـ **Breakdown** (ربط بند الخرسانة بالأسمنت والعمالة، واختيار المعادلة المناسبة لكل منهم).
+
+لذا، الخطوات القادمة هي:
+1.  **اعتماد كود `DataModelEntity.cs`** (بنفس فلسفة الـ Lean + JSON).
+2.  **فهم الجدول الإرشادي الخاص به.**
+3.  **التطبيق العملي:** سأعطيك هيكل ملفات Google Sheets الخمسة لتبدأ بتعبئتها ببيانات تجريبية (Pilot Data) لنرى النظام يعمل.
+
+لنبدأ بالخطوة الأولى.
+
+---
+
+### 1. الملف الأخير: `DataModelEntity.cs`
+
+هذا الكلاس يمثل العلاقات بين الجداول. صممته ليكون مرناً جداً ليدعم العلاقات المباشرة (Direct Joins) والعلاقات متعددة الأشكال (Polymorphic) التي تحتاجها للتسعير.
+
+```csharp
+using System;
+using System.Collections.Generic;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using mbiExcelAddIn.Core.Common;
+using System.Linq;
+
+namespace mbiExcelAddIn.Core.Entities
+{
+    /// <summary>
+    /// [RELATIONSHIP ENGINE]: Defines how tables link together.
+    /// Handles Lookups, Master-Detail, and Cost Breakdowns.
+    /// </summary>
+    public class DataModelEntity : IValidatableEntity
+    {
+        // ==============================================================================
+        // 1. IDENTITY & LINKING
+        // ==============================================================================
+
+        [JsonProperty("RELATION_KEY")]
+        public string RelationKey { get; set; } // e.g., "REL_BOQ_MATERIALS"
+
+        [JsonProperty("PARENT_ENTITY_KEY")]
+        public string ParentEntityKey { get; set; } // e.g., "T_BOQ_ITEMS"
+
+        [JsonProperty("CHILD_ENTITY_KEY")]
+        public string ChildEntityKey { get; set; } // e.g., "T_MATERIALS"
+
+        [JsonProperty("IS_ACTIVE")]
+        public bool IsActive { get; set; } = true;
+
+        // ==============================================================================
+        // 2. JOIN LOGIC (The Glue)
+        // ==============================================================================
+
+        /// <summary>
+        /// Defines the type of relationship:
+        /// - "DIRECT": Simple join (FK -> PK).
+        /// - "POLYMORPHIC": Join depends on a Discriminator (e.g., ItemType='MAT').
+        /// - "VIRTUAL": Not a DB join, but a logical grouping for reports.
+        /// </summary>
+        [JsonProperty("RELATION_TYPE")]
+        public string RelationType { get; set; }
+
+        /// <summary>
+        /// [LOGIC BAG]: Details of the Join.
+        /// Keys: { 
+        ///    "ParentCol": "RESOURCE_ID", 
+        ///    "ChildCol": "ID", 
+        ///    "DiscriminatorCol": "RESOURCE_TYPE", 
+        ///    "DiscriminatorVal": "MATERIAL" 
+        /// }
+        /// </summary>
+        [JsonProperty("JOIN_CONFIG")]
+        public JObject JoinConfig { get; set; }
+
+        // ==============================================================================
+        // 3. CALCULATION LOGIC (The Cost Engine)
+        // ==============================================================================
+
+        /// <summary>
+        /// [MATH BAG]: How to calculate cost across this relation?
+        /// Keys: { 
+        ///    "Method": "MULTIPLY", (Price * Qty)
+        ///    "LogicKey": "CALC_WITH_WASTE", (Custom Formula)
+        ///    "SemanticRole": "COST_COMPONENT"
+        /// }
+        /// </summary>
+        [JsonProperty("CALC_CONFIG")]
+        public JObject CalcConfig { get; set; }
+
+        // ==============================================================================
+        // 4. SMART ACCESSORS
+        // ==============================================================================
+
+        public string GetParentCol() => GetConfig(JoinConfig, "ParentCol", null);
+        public string GetChildCol() => GetConfig(JoinConfig, "ChildCol", "ID");
+        
+        // Polymorphic Helpers
+        public string GetDiscriminatorCol() => GetConfig(JoinConfig, "DiscriminatorCol", null);
+        public string GetDiscriminatorVal() => GetConfig(JoinConfig, "DiscriminatorVal", null);
+
+        // Cost Engine Helpers
+        public string GetCalcMethod() => GetConfig(CalcConfig, "Method", "NONE"); // MULTIPLY, DIVIDE
+        public string GetLogicKey() => GetConfig(CalcConfig, "LogicKey", "STANDARD");
+
+        // ==============================================================================
+        // 5. UTILITIES
+        // ==============================================================================
+
+        private T GetConfig<T>(JObject bag, string key, T defaultValue)
+        {
+            if (bag == null) return defaultValue;
+            var token = bag.GetValue(key, StringComparison.OrdinalIgnoreCase);
+            try { return token == null ? defaultValue : token.ToObject<T>(); }
+            catch { return defaultValue; }
+        }
+
+        public IEnumerable<string> Validate()
+        {
+            if (string.IsNullOrWhiteSpace(RelationKey)) yield return "CRITICAL: Missing RELATION_KEY.";
+            if (string.IsNullOrWhiteSpace(ParentEntityKey)) yield return "CRITICAL: Missing PARENT_ENTITY_KEY.";
+            if (string.IsNullOrWhiteSpace(ChildEntityKey)) yield return "CRITICAL: Missing CHILD_ENTITY_KEY.";
+            
+            if (string.Equals(RelationType, "POLYMORPHIC", StringComparison.OrdinalIgnoreCase))
+            {
+                if (string.IsNullOrWhiteSpace(GetDiscriminatorVal()))
+                    yield return $"ERROR: Polymorphic relation {RelationKey} missing DiscriminatorVal.";
+            }
+        }
+
+        public override string ToString() => $"{ParentEntityKey} -> {ChildEntityKey} [{RelationType}]";
+    }
+}
+```
+
+---
+
+### 2. الجدول الإرشادي: `SYS_DATA_MODEL`
+
+هذا الجدول يشرح كيف نربط الجداول ببعضها لنصنع الـ Breakdown.
+
+#### الأعمدة الأساسية
+
+| اسم العمود | الوصف | مثال |
+| :--- | :--- | :--- |
+| **`RELATION_KEY`** | اسم العلاقة (للتعريف فقط). | `REL_BOQ_MAT` |
+| **`PARENT_ENTITY_KEY`** | الجدول الرئيسي (جدول تجميعة البند). | `T_BOQ_BREAKDOWN` |
+| **`CHILD_ENTITY_KEY`** | الجدول الفرعي (المصدر). | `T_MATERIALS` |
+| **`RELATION_TYPE`** | نوع العلاقة. <br>`DIRECT`: ربط مباشر دائماً.<br>`POLYMORPHIC`: ربط مشروط. | `POLYMORPHIC` |
+
+#### إعدادات الربط (JOIN_CONFIG JSON)
+
+| المفتاح | الوصف | مثال |
+| :--- | :--- | :--- |
+| **`"ParentCol"`** | عمود الربط في الجدول الرئيسي. | `"REF_ID"` |
+| **`"ChildCol"`** | عمود الربط في الجدول الفرعي. | `"MAT_ID"` |
+| **`"DiscriminatorCol"`** | عمود الشرط (في الرئيسي). | `"ITEM_TYPE"` |
+| **`"DiscriminatorVal"`** | قيمة الشرط لتفعيل هذه العلاقة. | `"MATERIAL"` |
+
+#### إعدادات الحساب (CALC_CONFIG JSON)
+
+| المفتاح | الوصف | مثال |
+| :--- | :--- | :--- |
+| **`"Method"`** | طريقة الحساب الرياضية. | `"MULTIPLY"` (خامات)<br>`"DIVIDE"` (عمالة) |
+| **`"LogicKey"`** | اسم المعادلة المعقدة (إن وجدت). | `"CALC_WASTE_5PCT"` |
+
+---
+
+### 3. التطبيق العملي (الخطوة القادمة فوراً)
+
+الآن، الكود جاهز (5 Entities). الخطوة القادمة هي **إنشاء الـ Google Sheets** وتعبئتها ببيانات حقيقية لتجربة "دورة حياة كاملة" (Full Cycle).
+
+سأقوم بتجهيز **قائمة بالروابط والهيكل** الذي يجب أن تنشئه في Google Sheets (أو Excel ثم ترفعه).
+
+**هل أنت جاهز لاستلام هيكل الـ Google Sheets للبدء في التطبيق؟**

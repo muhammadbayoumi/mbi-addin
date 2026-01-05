@@ -3,5 +3,5 @@
   "url": "https://github.com/muhammadbayoumi/mbi-addin/releases/download/v1.1.6/v1.1.6.zip",
   "notes": "• Added new features and fixed bugs.\n• Added new features and fixed bugs. (SHA-256).\n• SQLite.",
   "sha256": "",
-  "isRequired": True
+  "isRequired": true
 }

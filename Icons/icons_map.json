@@ -6,7 +6,7 @@
     { "ControlName": "btnPhone",    "FileName": "telephone-symbol-button.png" },
     { "ControlName": "btnVersion",  "FileName": "apps.png" },
     { "ControlName": "mnuAbout",    "FileName": "info.png" },
-    { "ControlName": "btnIconStatus", "FileName": "web-development.png" },
+    { "ControlName": "btnSyncIcons", "FileName": "web-development.png" },
     { "ControlName": "btnStationElevationCoordinate", "FileName": "noun-geodetic-equipment.png" },
     { "ControlName": "btnShapeCode77", "FileName": "noun-spring-coil.png" },
     { "ControlName": "btnHelp", "FileName": "question.png" },

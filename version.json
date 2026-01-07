@@ -2,6 +2,6 @@
   "version": "1.0.0.1",
   "url": "https://github.com/muhammadbayoumi/mbi-addin/releases/download/v1.0.0.1/1.0.0.1.zip",
   "notes": "• Added new features and fixed bugs.\n• (SHA-256).\n• SQLite.",
-  "sha256": "sha256:2672f9dee748085e7d0ff880582d675c7b6284fd7f226d959745aa9711855c65",
+  "sha256": "2672f9dee748085e7d0ff880582d675c7b6284fd7f226d959745aa9711855c65",
   "isRequired": true
 }

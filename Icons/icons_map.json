@@ -15,9 +15,9 @@
     { "ControlName": "btnSettings", "FileName": ".png" },
     { "ControlName": "btnSubscription","FileName": "ContactCard"},
     { "ControlName": "button1", "FileName": "Calculator" },
-    { "ControlName": "button2", "FileName": "ChartTypeColumnClustered" },
+    { "ControlName": "button2", "FileName": "TableInsert" },
     { "ControlName": "button3", "FileName": "AutoSum" },
-    { "ControlName": "button4", "FileName": "ReviewSendAsPdf" },
-    { "ControlName": "button5", "FileName": "ObjectEditLayer" }
+    { "ControlName": "button4", "FileName": "FileSendAsPdfEmail" },
+    { "ControlName": "button5", "FileName": "FunctionsInsert" }
   ]
 }

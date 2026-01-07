@@ -1,5 +1,6 @@
 {
   "Version": "2.3",
+  "ForceRefresh": true,
   "Icons": [
     { "ControlName": "btnLinkedIn", "FileName": "linkedin.png" },
     { "ControlName": "btnEmail",    "FileName": "mail.png" },

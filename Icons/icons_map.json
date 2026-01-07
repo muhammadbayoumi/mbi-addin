@@ -13,6 +13,6 @@
     { "ControlName": "btnHelp", "FileName": "question.png" },
     { "ControlName": "btnConnectionStatus", "FileName": "data.png" },
     { "ControlName": "btnSettings", "FileName": ".png" },
-    { "ControlName": "btnSubscription","FileName": "User"},
+    { "ControlName": "btnSubscription","FileName": "EnterpriseProjectProfiles"},
   ]
 }

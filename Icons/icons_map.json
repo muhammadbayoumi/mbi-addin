@@ -1,5 +1,5 @@
 {
-  "Version": "2.4",
+  "Version": "2.5",
   "ForceRefresh": true,
   "Icons": [
     { "ControlName": "btnLinkedIn", "FileName": "linkedin.png" },
@@ -13,10 +13,10 @@
     { "ControlName": "btnHelp", "FileName": "question.png" },
     { "ControlName": "btnConnectionStatus", "FileName": "data.png" },
     { "ControlName": "btnSettings", "FileName": ".png" },
-    { "ControlName": "btnSubscription","FileName": "ContactCard"},
+    { "ControlName": "btnSubscription","FileName": "User"},
     { "ControlName": "button1", "FileName": "Calculator" },
     { "ControlName": "button2", "FileName": "TableInsert" },
-    { "ControlName": "button3", "FileName": "ContactCard" },
+    { "ControlName": "button3", "FileName": "SendUpdate" },
     { "ControlName": "button4", "FileName": "FileSave" },
     { "ControlName": "button5", "FileName": "FilePrint" }
   ]

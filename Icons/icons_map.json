@@ -14,10 +14,5 @@
     { "ControlName": "btnConnectionStatus", "FileName": "data.png" },
     { "ControlName": "btnSettings", "FileName": ".png" },
     { "ControlName": "btnSubscription","FileName": "User"},
-    { "ControlName": "button1", "FileName": "Calculator" },
-    { "ControlName": "button2", "FileName": "TableInsert" },
-    { "ControlName": "button3", "FileName": "SendUpdate" },
-    { "ControlName": "button4", "FileName": "FileSave" },
-    { "ControlName": "button5", "FileName": "FilePrint" }
   ]
 }

@@ -1,10 +1,10 @@
 {
-  "Version": "1.7",
+  "Version": "1.8",
   "Icons": [
     { "ControlName": "btnLinkedIn", "FileName": "linkedin.png" },
     { "ControlName": "btnEmail",    "FileName": "mail.png" },
     { "ControlName": "btnPhone",    "FileName": "telephone-symbol-button.png" },
-    { "ControlName": "btnVersion",  "FileName": "apps.png" },
+    { "ControlName": "btnVersion",  "FileName": ".png" },
     { "ControlName": "mnuAbout",    "FileName": "info.png" },
     { "ControlName": "btnSyncIcons", "FileName": "web-development.png" },
     { "ControlName": "btnStationElevationCoordinate", "FileName": "noun-geodetic-equipment.png" },

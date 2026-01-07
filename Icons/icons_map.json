@@ -17,7 +17,7 @@
     { "ControlName": "button1", "FileName": "Calculator" },
     { "ControlName": "button2", "FileName": "TableInsert" },
     { "ControlName": "button3", "FileName": "AutoSum" },
-    { "ControlName": "button4", "FileName": "FileSendAsPdfEmail" },
-    { "ControlName": "button5", "FileName": "FunctionsInsert" }
+    { "ControlName": "button4", "FileName": "FileSave" },
+    { "ControlName": "button5", "FileName": "FilePrint" }
   ]
 }

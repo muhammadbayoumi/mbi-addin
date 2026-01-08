@@ -15,7 +15,7 @@
     { 
       "ControlName": "btnSettings", 
       "FileName": "settings_v2.png", 
-      "ForceRefresh": true 
+      "ForceRefresh": false 
     },
     { 
       "ControlName": "btnConnectionStatus", 

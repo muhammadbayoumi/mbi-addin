@@ -1,18 +1,26 @@
 {
-  "Version": "2.6",
-  "ForceRefresh": true,
+  "Version": "7",
+  "ForceRefresh": false,
   "Icons": [
-    { "ControlName": "btnLinkedIn", "FileName": "linkedin.png" },
-    { "ControlName": "btnEmail",    "FileName": "mail.png" },
-    { "ControlName": "btnPhone",    "FileName": "telephone-symbol-button.png" },
-
-    { "ControlName": "mnuAbout",    "FileName": "info.png" },
- 
-    { "ControlName": "btnStationElevationCoordinate", "FileName": "noun-geodetic-equipment.png" },
-    { "ControlName": "btnShapeCode77", "FileName": "noun-spring-coil.png" },
-    { "ControlName": "btnHelp", "FileName": "question.png" },
-    { "ControlName": "btnConnectionStatus", "FileName": "data.png" },
-    { "ControlName": "btnSettings", "FileName": ".png" },
-
+    { 
+      "ControlName": "btnLinkedIn", 
+      "FileName": "linkedin.png", 
+      "ForceRefresh": false 
+    },
+    { 
+      "ControlName": "btnEmail",    
+      "FileName": "mail.png", 
+      "ForceRefresh": false 
+    },
+    { 
+      "ControlName": "btnSettings", 
+      "FileName": "settings_v2.png", 
+      "ForceRefresh": true 
+    },
+    { 
+      "ControlName": "btnConnectionStatus", 
+      "FileName": "data.png", 
+      "ForceRefresh": false 
+    }
   ]
 }

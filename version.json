@@ -1,6 +1,6 @@
 {
   "version": "1.0.0.6",
-  "url": "https://github.com/muhammadbayoumi/mbi-addin/releases/download/v1.0.0.5/1.0.0.5.zip",
+  "url": "https://github.com/muhammadbayoumi/mbi-addin/releases/download/v1.0.0.6/1.0.0.6.zip",
   "notes": "• Added new features and fixed bugs.\n• LogDebug, LogTrace.",
   "sha256": "61f71b6ac6c62f5955bb397063a79db36626a24000d6a646beac70c96214b7c6",
   "isRequired": true

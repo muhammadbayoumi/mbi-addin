@@ -9,12 +9,12 @@
     },
     { 
       "ControlName": "btnEmail",    
-      "FileName": "mail.png", 
+      "FileName": "crown.png", 
       "ForceRefresh": false 
     },
     { 
       "ControlName": "btnSettings", 
-      "FileName": "settings_v2.png", 
+      "FileName": "mail.png", 
       "ForceRefresh": false 
     },
      { 

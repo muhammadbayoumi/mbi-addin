@@ -10,7 +10,7 @@
     { 
       "ControlName": "btnEmail",    
       "FileName": "crown.png", 
-      "ForceRefresh": true 
+      "ForceRefresh": false 
     },
     { 
       "ControlName": "btnSettings", 
@@ -24,8 +24,8 @@
     },
      { 
       "ControlName": "button2", 
-      "FileName": "mail.png", 
-      "ForceRefresh": false 
+      "FileName": "crown.png", 
+      "ForceRefresh": true 
     },
     { 
       "ControlName": "btnConnectionStatus", 

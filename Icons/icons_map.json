@@ -25,7 +25,7 @@
      { 
       "ControlName": "button2", 
       "FileName": "crown.png", 
-      "ForceRefresh": true 
+      "ForceRefresh": false 
     },
     { 
       "ControlName": "btnConnectionStatus", 

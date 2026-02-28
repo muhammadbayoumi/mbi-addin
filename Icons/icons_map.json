@@ -1,5 +1,5 @@
 {
-  "Version": "1",
+  "Version": "7",
   "ForceRefresh": false,
   "Icons": [
     { 
@@ -19,12 +19,12 @@
     },
      { 
       "ControlName": "button1", 
-      "FileName": "help", 
+      "FileName": "Help", 
       "ForceRefresh": false 
     },
      { 
       "ControlName": "button2", 
-      "FileName": "settings_v2.png", 
+      "FileName": "mail.png", 
       "ForceRefresh": false 
     },
     { 

@@ -1,7 +1,7 @@
 {
-  "version": "1.0.0.9",
-  "url": "https://github.com/muhammadbayoumi/mbi-addin/releases/download/v1.0.0.9/1.0.0.9.zip",
-  "notes": "• Added new features and fixed bugs.\n• bootstrpper fix (internet connection, and icons).",
-  "sha256": "a61da04f4b77ffe34a8350c1150960141f231467b0a442762eb4ee46085fc743",
+  "version": "1.0.0.10",
+  "url": "https://github.com/muhammadbayoumi/mbi-addin/releases/download/v1.0.0.10/1.0.0.10.zip",
+  "notes": "• Added new features and fixed bugs.\n• Log fix.",
+  "sha256": "aa6fb82c6fb71ee2997e1efab5fa0529fe336e730e0ac9d267ae03948e90c6f1",
   "isRequired": true
 }

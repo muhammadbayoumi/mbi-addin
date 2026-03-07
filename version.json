@@ -1,7 +1,7 @@
 {
-  "version": "1.0.0.11",
-  "url": "https://github.com/muhammadbayoumi/mbi-addin/releases/download/v1.0.0.11/1.0.0.11.zip",
+  "version": "1.0.0.12",
+  "url": "https://github.com/muhammadbayoumi/mbi-addin/releases/download/v1.0.0.12/1.0.0.12.zip",
   "notes": "• Added new features and fixed bugs.\n• msgbox fix.",
-  "sha256": "a28453eeac918d042f83d0d066472880a92b680d9c4ddc1b3a2b577e7deebb30",
+  "sha256": "afcc49c37b8485b13f1fb8a04dba4d61b21c50c8919f090b21e123a58c24722f",
   "isRequired": true
 }

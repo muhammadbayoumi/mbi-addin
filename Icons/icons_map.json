@@ -28,7 +28,7 @@
       "ForceRefresh": false 
     },
     { 
-      "ControlName": "btnConnectionStatus", 
+      "ControlName": "splitbtnData", 
       "FileName": "data.png", 
       "ForceRefresh": false 
     }

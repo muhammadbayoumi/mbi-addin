@@ -1,6 +1,6 @@
 {
   "Version": "7",
-  "ForceRefresh": true,
+  "ForceRefresh": false,
   "Icons": [
     { 
       "ControlName": "btnLinkedIn", 

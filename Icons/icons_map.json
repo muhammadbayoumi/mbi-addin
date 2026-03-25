@@ -1,5 +1,5 @@
 {
-  "Version": "7",
+  "Version": "mbi 25.mar.2026",
   "ForceRefresh": false,
   "Icons": [
     { 
@@ -29,7 +29,7 @@
     },
     { 
       "ControlName": "splitbtnData", 
-      "FileName": "data.png", 
+      "FileName": "cloud.png", 
       "ForceRefresh": false 
     }
   ]

@@ -1,17 +1,17 @@
 {
-  "Version": "mbi 27.mar.2026",
+  "Version": "mbi mar.2026",
   "ForceRefresh": false,
   "Icons": [
     {
       "ControlName": "splitbtnData",
-      "FileName": "database.png",
+      "FileName": "SearchUI",
       "ForceRefresh": false,
       "StateIcons": {
-        "Data": "database.png",
-        "Online": "cloud-server.png",
-        "Idle": "loading.png",
-        "Offline": "local-disk.png",
-        "Frozen": "fish.png"
+        "Data": "SearchUI",
+        "Online": "cloud-online.png",
+        "Idle": "warning-red",
+        "Offline": "cloud-offline.png",
+        "Frozen": "warning-orange.png"
       }
     },
     

@@ -3,6 +3,19 @@
   "ForceRefresh": false,
   "Icons": [
     {
+  "ControlName": "btnSubscription",
+  "FileName": "default_license.png",
+  "ForceRefresh": false,
+  "StateIcons": {
+    "License": "sync_icon.png",
+    "Offline": "offline_icon.png",
+    "Expired": "expired_icon.png",
+    "Subscribe": "subscribe_icon.png",
+    "Free": "shield_bronze.png",
+    "Standard": "shield_silver.png",
+    "Premium": "shield_gold.png"
+  },
+    {
       "ControlName": "splitbtnData",
       "FileName": "GetPowerQueryDataFromDatabase",
       "ForceRefresh": false,

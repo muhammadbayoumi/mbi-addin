@@ -1,7 +1,21 @@
 {
-  "Version": "mbi 25.mar.2026",
+  "Version": "mbi 27.mar.2026",
   "ForceRefresh": false,
   "Icons": [
+    {
+      "ControlName": "splitbtnData",
+      "FileName": "database.png",
+      "ForceRefresh": false,
+      "StateIcons": {
+        "Data": "database.png",
+        "Online": "cloud-server.png",
+        "Idle": "loading.png",
+        "Offline": "local-disk.png",
+        "Frozen": "fish.png"
+      }
+    }
+
+    
     { 
       "ControlName": "btnLinkedIn", 
       "FileName": "linkedin.png", 
@@ -25,11 +39,6 @@
      { 
       "ControlName": "button2", 
       "FileName": "crown.png", 
-      "ForceRefresh": false 
-    },
-    { 
-      "ControlName": "splitbtnData", 
-      "FileName": "cloud.png", 
       "ForceRefresh": false 
     }
   ]

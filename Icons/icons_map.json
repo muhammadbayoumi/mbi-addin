@@ -7,7 +7,7 @@
       "FileName": "GetPowerQueryDataFromDatabase",
       "ForceRefresh": false,
       "StateIcons": {
-        "Data": "SearchUI",
+        "Data": "GetPowerQueryDataFromDatabase",
         "Online": "cloud-online.png",
         "Idle": "warning-red",
         "Offline": "cloud-offline.png",

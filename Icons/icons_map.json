@@ -1,10 +1,10 @@
 {
-  "Version": "mbi mar.2026",
+  "Version": "mbi 27.mar.2026",
   "ForceRefresh": false,
   "Icons": [
     {
       "ControlName": "splitbtnData",
-      "FileName": "SearchUI",
+      "FileName": "GetPowerQueryDataFromDatabase",
       "ForceRefresh": false,
       "StateIcons": {
         "Data": "SearchUI",

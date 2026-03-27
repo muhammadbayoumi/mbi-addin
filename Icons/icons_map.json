@@ -13,8 +13,7 @@
         "Offline": "local-disk.png",
         "Frozen": "fish.png"
       }
-    }
-
+    },
     
     { 
       "ControlName": "btnLinkedIn", 

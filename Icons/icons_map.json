@@ -4,16 +4,16 @@
   "Icons": [
     {
   "ControlName": "btnSubscription",
-  "FileName": "default_license.png",
+  "FileName": "shield-search.png",
   "ForceRefresh": false,
   "StateIcons": {
-    "License": "sync_icon.png",
-    "Offline": "offline_icon.png",
-    "Expired": "expired_icon.png",
-    "Subscribe": "subscribe_icon.png",
-    "Free": "shield_bronze.png",
-    "Standard": "shield_silver.png",
-    "Premium": "shield_gold.png"
+    "License": "shield-search.png",
+    "Offline": "shield.png",
+    "Expired": "shield-exclamation.png",
+    "Subscribe": "bell.png",
+    "Free": "shield.png",
+    "Standard": "shield-half.png",
+    "Premium": "shield-half.png"
   },
     {
       "ControlName": "splitbtnData",

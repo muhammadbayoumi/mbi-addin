@@ -14,6 +14,7 @@
     "Free": "shield.png",
     "Standard": "shield-half.png",
     "Premium": "shield-half.png"
+    }
   },
     {
       "ControlName": "splitbtnData",

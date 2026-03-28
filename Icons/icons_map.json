@@ -18,13 +18,13 @@
   },
     {
       "ControlName": "splitbtnData",
-      "FileName": "GetPowerQueryDataFromDatabase",
+      "FileName": "cloud-search.png",
       "ForceRefresh": false,
       "StateIcons": {
-        "Data": "GetPowerQueryDataFromDatabase",
-        "Online": "cloud-online.png",
-        "Idle": "warning-red",
-        "Offline": "cloud-offline.png",
+        "Data": "cloud-search.png",
+        "Online": "cloud (Filled).png",
+        "Idle": "cloud-exclamation",
+        "Offline": "cloud.png",
         "Frozen": "warning-orange.png"
       }
     },

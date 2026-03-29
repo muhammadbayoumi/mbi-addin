@@ -40,8 +40,8 @@
       "ForceRefresh": false 
     },
     { 
-      "ControlName": "btnSettings", 
-      "FileName": "mail.png", 
+      "ControlName": "menu1", 
+      "FileName": "file-spreadsheet.png", 
       "ForceRefresh": false 
     },
      { 

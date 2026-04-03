@@ -49,6 +49,19 @@
       "FileName": "Help", 
       "ForceRefresh": false 
     },
+    {
+  "ControlName": "btnSyncIcons",
+  "FileName": "default_library.png",
+  "ForceRefresh": false,
+  "StateIcons": {
+    "Icons map": "map_search.png",
+    "Syncing": "download_anim.png",
+    "Offline": "no_wifi.png",
+    "Icons Error": "error_alert.png",
+    "Icons Updated": "success_check.png",
+    "Icon Library": "box_library.png"
+  }
+},
      { 
       "ControlName": "button2", 
       "FileName": "crown.png", 

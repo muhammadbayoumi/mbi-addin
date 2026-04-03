@@ -51,15 +51,15 @@
     },
     {
   "ControlName": "btnSyncIcons",
-  "FileName": "default_library.png",
+  "FileName": "icons.png",
   "ForceRefresh": false,
   "StateIcons": {
-    "Icons map": "map_search.png",
-    "Syncing": "download_anim.png",
-    "Offline": "no_wifi.png",
-    "Icons Error": "error_alert.png",
-    "Icons Updated": "success_check.png",
-    "Icon Library": "box_library.png"
+    "Icons map": "icons.png",
+    "Syncing": "sort-descending-shapes (outline).png",
+    "Offline": "icons.png",
+    "Icons Error": "bug (Filled).png",
+    "Icons Updated": "sort-descending-shapes.png",
+    "Icon Library": "icons (Filled).png"
   }
 },
      { 

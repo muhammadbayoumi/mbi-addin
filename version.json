@@ -3,6 +3,6 @@
   "url": "https://github.com/muhammadbayoumi/mbi-addin/releases/download/v1.0.0.26/1.0.0.26.zip",
   "notes": "• Added new features and fixed bugs.\n• SQL fix.",
   "sha256": "1166a52223ece4f8de5219adf6369128f4f13c7e415b2e79babb8f8e33528787",
-  "isRequired": true,
+  "isRequired": false,
   "isSilentPatch": true
 }

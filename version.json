@@ -1,8 +1,8 @@
 {
-  "version": "1.0.0.30",
-  "url": "https://github.com/muhammadbayoumi/mbi-addin/releases/download/v1.0.0.30/1.0.0.30.zip",
+  "version": "1.0.0.31",
+  "url": "https://github.com/muhammadbayoumi/mbi-addin/releases/download/v1.0.0.31/1.0.0.31.zip",
   "notes": "• Added new features and fixed bugs.\n• SQL fix.",
-  "sha256": "171d132dba82589bc3ccc33dffd129215b392faa1f41c96a9916942d87dbd7ce",
+  "sha256": "64095556c1bb985f0c10cf128a3276c1d3c5bcfae432d0bfc73fd3bdb69c5b0f",
   "isRequired": false,
   "isSilentPatch": true
 }

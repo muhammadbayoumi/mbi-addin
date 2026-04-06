@@ -4,5 +4,5 @@
   "notes": "• Added new features and fixed bugs.\n• Silent Update fix.",
   "sha256": "9352149023295b876569b939e0ffc5f482c72b1eefa0c07134fb1298400ac23f",
   "isRequired": false,
-  "isSilentPatch": true
+  "isSilentPatch": false
 }

@@ -1,8 +1,8 @@
 {
-  "version": "1.0.0.44",
-  "url": "https://github.com/muhammadbayoumi/mbi-addin/releases/download/v1.0.0.44/1.0.0.44.zip",
+  "version": "1.0.0.45",
+  "url": "https://github.com/muhammadbayoumi/mbi-addin/releases/download/v1.0.0.45/1.0.0.45.zip",
   "notes": "• Added new features and fixed bugs.\n• Silent Update fix.",
-  "sha256": "9352149023295b876569b939e0ffc5f482c72b1eefa0c07134fb1298400ac23f",
+  "sha256": "2f144a6a57b401aca1678163c94ab96aec9473f72fa761d0e92fbf6434b48d84",
   "isRequired": false,
-  "isSilentPatch": false
+  "isSilentPatch": true
 }

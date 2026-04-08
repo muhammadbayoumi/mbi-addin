@@ -1,5 +1,5 @@
 {
-  "Version": "mbi apr.2026",
+  "Version": "mbi 8.apr.2026",
   "ForceRefresh": false,
   "Icons": [
     {
@@ -74,7 +74,7 @@
     "Update Error": "bug (Filled).png",
     "Critical Update": "bomb (filled).png",
     "Update Available": "file-download (Filled).png",
-    "Up to Date": "squareGreen+.png"
+    "Up to Date": "mb.png"
   }
 },
      { 

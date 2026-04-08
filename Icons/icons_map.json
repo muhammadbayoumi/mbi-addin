@@ -67,13 +67,13 @@
   "FileName": "source-code.png",
   "ForceRefresh": false,
   "StateIcons": {
-    "Updating...": "file-download (Filled).png",
+    "Updating...": "loader.png",
     "Version": "source-code.png",
     "Restart Excel": "alert-square.svg",
     "Check for Updates": "search (Filled).png",
     "Update Error": "bug (Filled).png",
     "Critical Update": "bomb (filled).png",
-    "Update Available": "system_update_alt_64dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.png",
+    "Update Available": "file-download (Filled).png",
     "Up to Date": "square.svg"
   }
 },

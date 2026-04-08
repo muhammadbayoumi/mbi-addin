@@ -1,5 +1,5 @@
 {
-  "Version": "mbi 8.apr.2026",
+  "Version": "mbi 9.apr.2026",
   "ForceRefresh": false,
   "Icons": [
     {
@@ -47,6 +47,11 @@
      { 
       "ControlName": "button1", 
       "FileName": "Help", 
+      "ForceRefresh": false 
+    },  
+    { 
+      "ControlName": "btnDiesel", 
+      "FileName": "icons8-petrol-94", 
       "ForceRefresh": false 
     },
     {

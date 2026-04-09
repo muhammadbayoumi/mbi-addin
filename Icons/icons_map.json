@@ -52,7 +52,7 @@
     { 
       "ControlName": "btnLiquidBitumen", 
       "FileName": "icons8-oil-industry-100.png", 
-      "ForceRefresh": false 
+      "ForceRefresh": true 
     },  
     { 
       "ControlName": "btnDiesel", 

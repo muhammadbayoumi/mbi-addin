@@ -1,5 +1,5 @@
 {
-  "Version": "mbi apr.2026",
+  "Version": "mbi 11.apr.2026",
   "ForceRefresh": false,
   "Icons": [
     {
@@ -52,7 +52,7 @@
     { 
       "ControlName": "btnLiquidBitumen", 
       "FileName": "icons8-oil-industry-100.png", 
-      "ForceRefresh": true 
+      "ForceRefresh": false 
     },  
     { 
       "ControlName": "btnDiesel", 

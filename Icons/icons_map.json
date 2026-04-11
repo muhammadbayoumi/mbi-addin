@@ -1,5 +1,5 @@
 {
-  "Version": "mbi 11.apr.2026",
+  "Version": "mbi 12.apr.2026",
   "ForceRefresh": false,
   "Icons": [
     {
@@ -27,6 +27,11 @@
         "Offline": "cloud.png",
         "Frozen": "warning-orange.png"
       }
+    },
+        { 
+      "ControlName": "btnDataExplorer", 
+      "FileName": "folder-search.png", 
+      "ForceRefresh": false 
     },
     
     { 

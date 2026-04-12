@@ -55,7 +55,7 @@
       "ControlName": "menu1", 
       "FileName": "file-spreadsheet.svg", 
       "ForceRefresh": false 
-    },
+
      { 
       "ControlName": "button1", 
       "FileName": "Help", 

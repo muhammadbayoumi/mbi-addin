@@ -1,5 +1,5 @@
 {
-  "Version": "mbi 12.apr.2026",
+  "Version": "mbi 13.apr.2026",
   "ForceRefresh": false,
   "Icons": [
     {
@@ -31,6 +31,13 @@
         { 
       "ControlName": "btnDataExplorer", 
       "FileName": "folder-search.png", 
+      "ForceRefresh": false 
+    },
+    
+   },
+        { 
+      "ControlName": "btnETLinspector", 
+      "FileName": "icons8-database-96.png", 
       "ForceRefresh": false 
     },
     

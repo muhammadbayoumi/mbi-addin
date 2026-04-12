@@ -3,19 +3,19 @@
   "ForceRefresh": false,
   "Icons": [
     {
-  "ControlName": "btnSubscription",
-  "FileName": "shield-search.png",
-  "ForceRefresh": false,
-  "StateIcons": {
-    "License": "shield-search.png",
-    "Offline": "shield.png",
-    "Expired": "shield-exclamation.png",
-    "Subscribe": "bell.png",
-    "Free": "shield.png",
-    "Standard": "shield-half.png",
-    "Premium": "shield-half.png"
-    }
-  },
+      "ControlName": "btnSubscription",
+      "FileName": "shield-search.png",
+      "ForceRefresh": false,
+      "StateIcons": {
+        "License": "shield-search.png",
+        "Offline": "shield.png",
+        "Expired": "shield-exclamation.png",
+        "Subscribe": "bell.png",
+        "Free": "shield.png",
+        "Standard": "shield-half.png",
+        "Premium": "shield-half.png"
+      }
+    },
     {
       "ControlName": "splitbtnData",
       "FileName": "cloud-search.png",
@@ -28,81 +28,78 @@
         "Frozen": "warning-orange.png"
       }
     },
-        { 
-      "ControlName": "btnDataExplorer", 
-      "FileName": "folder-search.png", 
-      "ForceRefresh": false 
-    },
-    
-   },
-        { 
-      "ControlName": "btnETLinspector", 
-      "FileName": "icons8-database-96.png", 
-      "ForceRefresh": false 
-    },
-    
-    { 
-      "ControlName": "btnLinkedIn", 
-      "FileName": "linkedin.png", 
-      "ForceRefresh": false 
-    },
-    { 
-      "ControlName": "btnEmail",    
-      "FileName": "crown.png", 
-      "ForceRefresh": false 
-    },
-    { 
-      "ControlName": "menu1", 
-      "FileName": "file-spreadsheet.svg", 
-      "ForceRefresh": false 
-
-     { 
-      "ControlName": "button1", 
-      "FileName": "Help", 
-      "ForceRefresh": false 
-    },    
-    { 
-      "ControlName": "btnLiquidBitumen", 
-      "FileName": "icons8-oil-industry-100.png", 
-      "ForceRefresh": false 
-    },  
-    { 
-      "ControlName": "btnDiesel", 
-      "FileName": "icons8-petrol-94.png", 
-      "ForceRefresh": false 
+    {
+      "ControlName": "btnDataExplorer",
+      "FileName": "folder-search.png",
+      "ForceRefresh": false
     },
     {
-  "ControlName": "btnSyncIcons",
-  "FileName": "icons.png",
-  "ForceRefresh": false,
-  "StateIcons": {
-    "Icons map": "icons.png",
-    "Syncing": "sort-descending-shapes (outline).png",
-    "Offline": "icons.png",
-    "Icons Error": "bug (Filled).png",
-    "Icons Updated": "sort-descending-shapes.png",
-    "Icon Library": "icons (Filled).png"
-  }
-},
+      "ControlName": "btnETLinspector",
+      "FileName": "icons8-database-96.png",
+      "ForceRefresh": false
+    },
     {
-  "ControlName": "btnCheckUpdates",
-  "FileName": "source-code.png",
-  "ForceRefresh": false,
-  "StateIcons": {
-    "Updating...": "loader.png",
-    "Version": "source-code.png",
-    "Restart Excel": "alert-square.svg",
-    "Check for Updates": "search (Filled).png",
-    "Update Error": "bug (Filled).png",
-    "Critical Update": "bomb (filled).png",
-    "Update Available": "file-download (Filled).png",
-    "Up to Date": "brand-tabler.png"
-  }
-},
-     { 
-      "ControlName": "button2", 
-      "FileName": "crown.png", 
-      "ForceRefresh": false 
+      "ControlName": "btnLinkedIn",
+      "FileName": "linkedin.png",
+      "ForceRefresh": false
+    },
+    {
+      "ControlName": "btnEmail",
+      "FileName": "crown.png",
+      "ForceRefresh": false
+    },
+    {
+      "ControlName": "menu1",
+      "FileName": "file-spreadsheet.svg",
+      "ForceRefresh": false
+    },
+    {
+      "ControlName": "button1",
+      "FileName": "Help",
+      "ForceRefresh": false
+    },
+    {
+      "ControlName": "btnLiquidBitumen",
+      "FileName": "icons8-oil-industry-100.png",
+      "ForceRefresh": false
+    },
+    {
+      "ControlName": "btnDiesel",
+      "FileName": "icons8-petrol-94.png",
+      "ForceRefresh": false
+    },
+    {
+      "ControlName": "btnSyncIcons",
+      "FileName": "icons.png",
+      "ForceRefresh": false,
+      "StateIcons": {
+        "Icons map": "icons.png",
+        "Syncing": "sort-descending-shapes (outline).png",
+        "Offline": "icons.png",
+        "Icons Error": "bug (Filled).png",
+        "Icons Updated": "sort-descending-shapes.png",
+        "Icon Library": "icons (Filled).png"
+      }
+    },
+    {
+      "ControlName": "btnCheckUpdates",
+      "FileName": "source-code.png",
+      "ForceRefresh": false,
+      "StateIcons": {
+        "Updating...": "loader.png",
+        "Version": "source-code.png",
+        "Restart Excel": "alert-square.svg",
+        "Check for Updates": "search (Filled).png",
+        "Update Error": "bug (Filled).png",
+        "Critical Update": "bomb (filled).png",
+        "Update Available": "file-download (Filled).png",
+        "Up to Date": "brand-tabler.png"
+      }
+    },
+    {
+      "ControlName": "button2",
+      "FileName": "crown.png",
+      "ForceRefresh": false
     }
   ]
 }

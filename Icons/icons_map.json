@@ -1,6 +1,12 @@
 {
   "Version": "mbi apr.2026",
   "ForceRefresh": false,
+  "PreloadAssets": [
+  "toolbar/save.png",
+  "toolbar/delete.png",
+  "status/ok.png",
+  "status/error.png"
+],
   "Icons": [
     {
       "ControlName": "btnSubscription",

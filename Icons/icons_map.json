@@ -1,5 +1,5 @@
 {
-  "Version": "mbi 15.apr.2026",
+  "Version": "mbi 16.apr.2026",
   "ForceRefresh": false,
   "Icons": [
     {
@@ -96,6 +96,8 @@
         "Up to Date": "brand-tabler.png"
       }
     },
+    { "ControlName": "Dynamic_Item_01", "FileName": "noun-geodetic-equipment.png" },
+    { "ControlName": "Dynamic_Item_02", "FileName": "noun-spring-coil.png" }
     {
       "ControlName": "button2",
       "FileName": "crown.png",

@@ -97,7 +97,7 @@
       }
     },
     { "ControlName": "Dynamic_Item_01", "FileName": "noun-geodetic-equipment.png" },
-    { "ControlName": "Dynamic_Item_02", "FileName": "noun-spring-coil.png" }
+    { "ControlName": "Dynamic_Item_02", "FileName": "noun-spring-coil.png" },
     {
       "ControlName": "button2",
       "FileName": "crown.png",

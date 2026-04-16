@@ -102,7 +102,7 @@
         "Up to Date": "brand-tabler.png"
       }
     },
-    { "ControlName": "tglShowTabRepository", "FileName": "Rsheet.png" },
+    { "ControlName": "tglShowTabRepository", "FileName": "Repository/Rsheet.png" },
    
     {
       "ControlName": "button2",

@@ -1,5 +1,5 @@
 {
-  "Version": "mbi apr.2026",
+  "Version": "mbi 17.apr.2026",
   "ForceRefresh": false,
   "PreloadAssets": [
   "noun-geodetic-equipment.png",
@@ -102,7 +102,7 @@
         "Up to Date": "brand-tabler.png"
       }
     },
-    { "ControlName": "tglShowTabRepository", "FileName": "Repository/Rsheet.png" },
+    { "ControlName": "tglShowTabRepository", "FileName": "Repository/mug (filled).png" },
    
     {
       "ControlName": "button2",

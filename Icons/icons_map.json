@@ -1,5 +1,5 @@
 {
-  "Version": "mbi 21.apr.2026",
+  "Version": "mbi 22.apr.2026",
   "ForceRefresh": false,
   "PreloadAssets": [
   "noun-geodetic-equipment.png",
@@ -104,7 +104,7 @@
     },
     { "ControlName": "tglShowTabRepository", "FileName": "device-gamepad-2 (Filled).png" },
     { "ControlName": "mnuMaterial", "FileName": "wheelbarrow_12309128.png" },
-    { "ControlName": "mnuEquipment", "FileName": "loader.png" },
+    { "ControlName": "mnuEquipment", "FileName": "dumper-truck.png" },
     { "ControlName": "mnuLabor", "FileName": "worker.png" },
     { "ControlName": "mnuDynamic", "FileName": "BOQsheet.png" },
    

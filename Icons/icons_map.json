@@ -104,7 +104,7 @@
     },
     { "ControlName": "tglShowTabRepository", "FileName": "device-gamepad-2 (Filled).png" },
     { "ControlName": "mnuMaterial", "FileName": "wheelbarrow_12309128.png" },
-    { "ControlName": "mnuEquipment", "FileName": "dexcavator (1).png" },
+    { "ControlName": "mnuEquipment", "FileName": "excavator (1).png" },
     { "ControlName": "mnuLabor", "FileName": "worker.png" },
     { "ControlName": "mnuDynamic", "FileName": "BOQsheet.png" },
    

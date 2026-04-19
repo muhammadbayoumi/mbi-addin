@@ -1,5 +1,5 @@
 {
-  "Version": "mbi 32.apr.2026",
+  "Version": "mbi 33.apr.2026",
   "ForceRefresh": false,
   "PreloadAssets": [
   "noun-geodetic-equipment.png",
@@ -79,9 +79,11 @@
       "FileName": "icons.png",
       "ForceRefresh": false,
       "StateIcons": {
+        "Sync Icons": "icons.png",
         "Icons map": "icons.png",
+        "Checking": "loader.png",
         "Syncing": "sort-descending-shapes (outline).png",
-        "Offline": "icons.png",
+        "Cached Icons": "icons.png",
         "Icons Error": "bug (Filled).png",
         "Icons Updated": "sort-descending-shapes.png",
         "Icon Library": "icons (Filled).png"

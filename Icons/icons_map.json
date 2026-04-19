@@ -1,5 +1,5 @@
 {
-  "Version": "mbi 30.2026",
+  "Version": "mbi 31.2026",
   "ForceRefresh": false,
   "PreloadAssets": [
   "noun-geodetic-equipment.png",
@@ -105,7 +105,7 @@
     { "ControlName": "tglShowTabRepository", "FileName": "device-gamepad-2 (Filled).png" },
     { "ControlName": "mnuMaterial", "FileName": "shovel.png" },
     { "ControlName": "mnuEquipment", "FileName": "excavator (1).png" },
-    { "ControlName": "mnuLabor", "FileName": "noun-labor-4711751 - Copy.png" },
+    { "ControlName": "mnuLabor", "FileName": "life-vest_15995885.png" },
     { "ControlName": "mnuDynamic", "FileName": "BOQsheet.png" },
    
     {

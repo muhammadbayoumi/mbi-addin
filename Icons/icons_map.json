@@ -1,5 +1,5 @@
 {
-  "Version": "mbi 31.2026",
+  "Version": "mbi 31.apr.2026",
   "ForceRefresh": false,
   "PreloadAssets": [
   "noun-geodetic-equipment.png",
@@ -106,7 +106,8 @@
     { "ControlName": "mnuMaterial", "FileName": "shovel.png" },
     { "ControlName": "mnuEquipment", "FileName": "excavator (1).png" },
     { "ControlName": "mnuLabor", "FileName": "life-vest_15995885.png" },
-    { "ControlName": "mnuDynamic", "FileName": "BOQsheet.png" },
+    { "ControlName": "mnuDynamic", "FileName": "icons8-list-view-64.png" },
+    { "ControlName": "mnuBOQ", "FileName": "icons8-bill-96.png" },
    
     {
       "ControlName": "button2",

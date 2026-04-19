@@ -1,5 +1,5 @@
 {
-  "Version": "mbi 34.apr.2026",
+  "Version": "mbi 19.apr.2026",
   "ForceRefresh": false,
   "PreloadAssets": [
   "noun-geodetic-equipment.png",
@@ -81,7 +81,7 @@
       "StateIcons": {
         "Sync Icons": "icons.png",
         "Icons map": "icons.png",
-        "Checking": "/VersionUpdateCommand/loader.png",
+        "Checking": "VersionUpdateCommand/loader.png",
         "Syncing": "sort-descending-shapes (outline).png",
         "Cached Icons": "icons.png",
         "Icons Error": "bug (Filled).png",
@@ -94,7 +94,7 @@
       "FileName": "source-code.png",
       "ForceRefresh": false,
       "StateIcons": {
-        "Updating...": "/VersionUpdateCommand/loader.png",
+        "Updating...": "VersionUpdateCommand/loader.png",
         "Version": "source-code.png",
         "Restart Excel": "alert-square.svg",
         "Check for Updates": "search (Filled).png",

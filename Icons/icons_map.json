@@ -1,5 +1,5 @@
 {
-  "Version": "mbi MAY2026",
+  "Version": "mbi 26MAY2026",
   "ForceRefresh": false,
   "PreloadAssets": [
   "noun-geodetic-equipment.png",
@@ -99,11 +99,11 @@
     { "ControlName": "mnuMaterial", "FileName": "shovel.png" },
     { "ControlName": "mnuEquipment", "FileName": "excavator (1).png" },
     { "ControlName": "mnuLabor", "FileName": "life-vest_15995885.png" },
-    { "ControlName": "mnuBOQ", "FileName": "BOQ/icons8-list-view-64.png" },
+    { "ControlName": "mnuBOQ", "FileName": "BOQ/icons8-bill-96.png" },
     { "ControlName": "btnLinkedin", "FileName": "Connect/icons8-linkedin-64.png" },
     { "ControlName": "btnWebsite", "FileName": "Connect/icons8-website-100.png" },
     { "ControlName": "btnEmail", "FileName": "Connect/icons8-email-100.png" },
-    { "ControlName": "btnGithub", "FileName": "Connect/icons8-github-64.png" },
+    { "ControlName": "btnGithub", "FileName": "brand-github.png" },
     { "ControlName": "btnWhatsapp", "FileName": "Connect/icons8-whatsapp-50.png" },
     { "ControlName": "btnYouTube", "FileName": "Connect/icons8-youtube-squared-50.png" },
 

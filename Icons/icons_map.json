@@ -1,5 +1,5 @@
 {
-  "Version": "mbi 06.may.2026",
+  "Version": "mbi MAY2026",
   "ForceRefresh": false,
   "PreloadAssets": [
   "noun-geodetic-equipment.png",
@@ -44,16 +44,7 @@
       "FileName": "database-search.png",
       "ForceRefresh": false
     },
-    {
-      "ControlName": "btnLinkedIn",
-      "FileName": "linkedin.png",
-      "ForceRefresh": false
-    },
-    {
-      "ControlName": "btnEmail",
-      "FileName": "crown.png",
-      "ForceRefresh": false
-    },
+
     {
       "ControlName": "menu1",
       "FileName": "file-spreadsheet.svg",

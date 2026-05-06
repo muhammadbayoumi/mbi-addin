@@ -113,8 +113,8 @@
     { "ControlName": "btnWebsite", "FileName": "Connect/icons8-website-100.png" },
     { "ControlName": "btnEmail", "FileName": "Connect/icons8-email-100.png" },
     { "ControlName": "btnGithub", "FileName": "Connect/icons8-github-64.png" },
-    { "ControlName": "btnWhatsapp", "FileName": "Connect/icons8-whatsapp-100.png" },
-    { "ControlName": "btnYouTube", "FileName": "Connect/icons8-youtube-squared-100.png" },
+    { "ControlName": "btnWhatsapp", "FileName": "Connect/icons8-whatsapp-50.png" },
+    { "ControlName": "btnYouTube", "FileName": "Connect/icons8-youtube-squared-50.png" },
 
     {
       "ControlName": "button2",

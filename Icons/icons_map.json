@@ -1,10 +1,11 @@
 {
-  "Version": "mbi 26MAY2026",
+  "Version": "mbi 20JUNE2026",
   "ForceRefresh": false,
   "PreloadAssets": [
   "noun-geodetic-equipment.png",
   "toolbar/delete.png",
   "noun-spring-coil.png",
+  "GARB/Gemini_Generated_Image_eha5zoeha5zoeha5.png",
   "status/error.png"
 ],
   "Icons": [

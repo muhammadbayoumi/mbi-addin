@@ -1,5 +1,5 @@
 {
-  "Version": "JULY2026",
+  "Version": "8JULY2026",
   "ForceRefresh": false,
   "PreloadAssets": [
     "noun-geodetic-equipment.png",
@@ -35,11 +35,11 @@
     },
     {
       "ControlName": "splitbtnData",
-      "FileName": "Cloud/cloud-code.png",
+      "FileName": "Cloud/cloud-search.png",
       "ForceRefresh": false,
       "StateIcons": {
         "Data Locked": "Cloud/cloud-lock.png",
-        "Loading Data...": "Cloud/cloud-search.png",
+        "Loading Data...": "Cloud/cloud-down.png",
         "Syncing Data...": "Cloud/cloud-down.png",
         "No Data": "Cloud/cloud-x.png",
         "Offline": "Cloud/cloud-off.png",

@@ -1,5 +1,5 @@
 {
-  "Version": "08JULY2026",
+  "Version": "09JULY2026",
   "ForceRefresh": false,
   "PreloadAssets": [
     "noun-geodetic-equipment.png",
@@ -35,22 +35,22 @@
     },
     {
       "ControlName": "splitbtnData",
-      "FileName": "cloud-search.png",
+      "FileName": "Cloud/cloud-code.png",
       "ForceRefresh": false,
       "StateIcons": {
-        "Data Locked": "",
-        "Loading Data...": "",
-        "Syncing Data...": "",
-        "No Data": "",
-        "Offline": "cloud.png",
+        "Data Locked": "Cloud/cloud-lock.png",
+        "Loading Data...": "Cloud/cloud-search.png",
+        "Syncing Data...": "Cloud/cloud-down.png",
+        "No Data": "Cloud/cloud-x.png",
+        "Offline": "Cloud/cloud-off.png",
         "Frozen": "warning-orange.png",
-        "Sync Failed": "",
-        "Data Updated": "",
-        "No Changes": "",
-        "Limited Access": "",
-        "Synchronized": "",
-        "Ready": "",
-        "Awaiting Sync": ""
+        "Sync Failed": "Cloud/cloud-exclamation.png",
+        "Data Updated": "Cloud/cloud-plus.png",
+        "No Changes": "Cloud/cloud.png",
+        "Limited Access": "Cloud/cloud-question.png",
+        "Synchronized": "Cloud/cloud-check.png",
+        "Ready": "Cloud/cloud-bolt.png",
+        "Awaiting Sync": "Cloud/cloud-down.png""
       }
     },
     {

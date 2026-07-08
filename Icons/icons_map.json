@@ -12,25 +12,25 @@
       "FileName": "shield-search.png",
       "ForceRefresh": false,
       "StateIcons": {
-        "License Locked": "",
-        "Checking License...": "",
-        "Retry Verification": "",
+        "License Locked": "shield-exclamation.png",
+        "Checking License...": "shield-search.png",
+        "Retry Verification": "shield-exclamation.png",
         "Offline": "shield.png",
         "Expired": "shield-exclamation.png",
-        "Suspended": "",
+        "Suspended": "shield-exclamation.png",
         "Subscribe": "bell.png",
         "Free": "shield.png",
         "Standard": "shield-half.png",
         "Premium": "shield-half.png",
-        "Admin": "",
-        "Free (Grace)": "",
-        "Standard (Grace)": "",
-        "Premium (Grace)": "",
-        "Admin (Grace)": "",
-        "Free (Unverified)": "",
-        "Standard (Unverified)": "",
-        "Premium (Unverified)": "",
-        "Admin (Unverified)": ""
+        "Admin": "shield-half.png",
+        "Free (Grace)": "shield.png",
+        "Standard (Grace)": "shield-half.png",
+        "Premium (Grace)": "shield-half.png",
+        "Admin (Grace)": "shield-half.png",
+        "Free (Unverified)": "shield.png",
+        "Standard (Unverified)": "shield-half.png",
+        "Premium (Unverified)": "shield-half.png",
+        "Admin (Unverified)": "shield-half.png"
       }
     },
     {
@@ -46,11 +46,11 @@
         "Frozen": "warning-orange.png",
         "Sync Failed": "Cloud/cloud-exclamation.png",
         "Data Updated": "Cloud/cloud-plus.png",
-        "No Changes": "Cloud/cloud.png",
+        "No Changes": "Cloud/cloud (f).png",
         "Limited Access": "Cloud/cloud-question.png",
         "Synchronized": "Cloud/cloud-check.png",
-        "Ready": "Cloud/cloud-bolt.png",
-        "Awaiting Sync": "Cloud/cloud-down.png"
+        "Ready": "Cloud/cloud.png",
+        "Awaiting Sync": "Cloud/cloud-exclamation.png"
       }
     },
     {

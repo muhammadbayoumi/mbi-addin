@@ -1,5 +1,5 @@
 {
-  "Version": "12JULY2026",
+  "Version": "13JULY2026",
   "ForceRefresh": false,
   "PreloadAssets": [
     "noun-geodetic-equipment.png",
@@ -68,6 +68,9 @@
       "ControlName": "mnuEurocode",
       "FileName": "EUROCODE/european-union.png",
       "ForceRefresh": false
+    },
+        {
+      "ControlName": "mnuRepository","FileName": "Repository/folder.png",
     },
     {
       "ControlName": "button1",

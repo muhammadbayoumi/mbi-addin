@@ -1,0 +1,8 @@
+{
+  "plans": [
+    { "id": "standard_monthly", "name": "Standard", "period": "monthly", "price": 9,   "currency": "USD", "description": "Core features, billed monthly" },
+    { "id": "standard_yearly",  "name": "Standard", "period": "yearly",  "price": 90,  "currency": "USD", "description": "Core features, 12-month license" },
+    { "id": "premium_monthly",  "name": "Premium",  "period": "monthly", "price": 19,  "currency": "USD", "description": "All features, billed monthly" },
+    { "id": "premium_yearly",   "name": "Premium",  "period": "yearly",  "price": 190, "currency": "USD", "description": "All features, 12-month license" }
+  ]
+}

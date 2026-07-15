@@ -1,5 +1,5 @@
 {
-  "Version": "JULY2026",
+  "Version": "15JULY2026",
   "ForceRefresh": false,
   "PreloadAssets": [
     "noun-geodetic-equipment.png",
@@ -48,7 +48,7 @@
         "Sync Failed": "Cloud/cloud-exclamation.png",
         "Data Updated": "Cloud/cloud-plus.png",
         "No Changes": "Cloud/cloud (f).png",
-        "Limited Access": "Cloud/cloud-question.png",
+        "Limited Access": "Cloud/cloud-bolt.png",
         "Synchronized": "Cloud/cloud-check.png",
         "Ready": "Cloud/cloud.png",
         "Awaiting Sync": "Cloud/cloud-exclamation.png"
@@ -96,7 +96,7 @@
         "Synchronize Icons": "",
         "Icons Locked": "",
         "Checking Icons...": "",
-        "Downloading Icons...": "",
+        "Downloading Icons...": "sort-descending-shapes.png",
         "Offline Icons": "",
         "Cached Icons": "icons.png",
         "Icon Sync Failed": "",

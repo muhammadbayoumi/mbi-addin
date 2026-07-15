@@ -1,7 +1,8 @@
 {
-  "Version": "15JULY2026",
+  "Version": "JULY2026",
   "ForceRefresh": false,
   "PreloadAssets": [
+    "Copy/",
     "noun-geodetic-equipment.png",
     "noun-spring-coil.png",
     "GARB/Gemini_Generated_Image_eha5zoeha5zoeha5.png",
